@@ -1,3 +1,9 @@
+// File name: A3_sheetpb3_20220431
+// Purpose: problem-3 solution
+// Author(s): Mahmoud saleh Saad
+// ID(s): 20220341
+// Section:7
+// Date:10/12/2023
 #include <bits/stdc++.h>
 using namespace std;
 int main()
