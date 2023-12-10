@@ -1,12 +1,9 @@
-#include <iostream>
-#include <cctype>
-#include <fstream>
-#include <map>
-#include <set>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     // enter file path
+    cout << "Enter file path:";
     string filePath;
     cin >> filePath;
 
