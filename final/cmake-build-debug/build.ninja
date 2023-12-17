@@ -49,8 +49,20 @@ cmake_ninja_workdir = C$:/projects/final/cmake-build-debug/
 
 build cmake_object_order_depends_target_final: phony || CMakeFiles/final.dir
 
+build CMakeFiles/final.dir/App.cpp.obj: CXX_COMPILER__final_unscanned_Debug C$:/projects/final/App.cpp || cmake_object_order_depends_target_final
+  DEP_FILE = CMakeFiles\final.dir\App.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\final.dir
+  OBJECT_FILE_DIR = CMakeFiles\final.dir
+
 build CMakeFiles/final.dir/X_O/src/GameManager.cpp.obj: CXX_COMPILER__final_unscanned_Debug C$:/projects/final/X_O/src/GameManager.cpp || cmake_object_order_depends_target_final
   DEP_FILE = CMakeFiles\final.dir\X_O\src\GameManager.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\final.dir
+  OBJECT_FILE_DIR = CMakeFiles\final.dir\X_O\src
+
+build CMakeFiles/final.dir/X_O/src/GameRunner.cpp.obj: CXX_COMPILER__final_unscanned_Debug C$:/projects/final/X_O/src/GameRunner.cpp || cmake_object_order_depends_target_final
+  DEP_FILE = CMakeFiles\final.dir\X_O\src\GameRunner.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\final.dir
   OBJECT_FILE_DIR = CMakeFiles\final.dir\X_O\src
@@ -73,18 +85,6 @@ build CMakeFiles/final.dir/X_O/src/X_O_Board.cpp.obj: CXX_COMPILER__final_unscan
   OBJECT_DIR = CMakeFiles\final.dir
   OBJECT_FILE_DIR = CMakeFiles\final.dir\X_O\src
 
-build CMakeFiles/final.dir/X_O/src/GameRunner.cpp.obj: CXX_COMPILER__final_unscanned_Debug C$:/projects/final/X_O/src/GameRunner.cpp || cmake_object_order_depends_target_final
-  DEP_FILE = CMakeFiles\final.dir\X_O\src\GameRunner.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\final.dir
-  OBJECT_FILE_DIR = CMakeFiles\final.dir\X_O\src
-
-build CMakeFiles/final.dir/App.cpp.obj: CXX_COMPILER__final_unscanned_Debug C$:/projects/final/App.cpp || cmake_object_order_depends_target_final
-  DEP_FILE = CMakeFiles\final.dir\App.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\final.dir
-  OBJECT_FILE_DIR = CMakeFiles\final.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target final
@@ -93,7 +93,7 @@ build CMakeFiles/final.dir/App.cpp.obj: CXX_COMPILER__final_unscanned_Debug C$:/
 #############################################
 # Link the executable final.exe
 
-build final.exe: CXX_EXECUTABLE_LINKER__final_Debug CMakeFiles/final.dir/X_O/src/GameManager.cpp.obj CMakeFiles/final.dir/X_O/src/Player.cpp.obj CMakeFiles/final.dir/X_O/src/RandomPlayer.cpp.obj CMakeFiles/final.dir/X_O/src/X_O_Board.cpp.obj CMakeFiles/final.dir/X_O/src/GameRunner.cpp.obj CMakeFiles/final.dir/App.cpp.obj
+build final.exe: CXX_EXECUTABLE_LINKER__final_Debug CMakeFiles/final.dir/App.cpp.obj CMakeFiles/final.dir/X_O/src/GameManager.cpp.obj CMakeFiles/final.dir/X_O/src/GameRunner.cpp.obj CMakeFiles/final.dir/X_O/src/Player.cpp.obj CMakeFiles/final.dir/X_O/src/RandomPlayer.cpp.obj CMakeFiles/final.dir/X_O/src/X_O_Board.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\final.dir

@@ -27,6 +27,7 @@ public:
     virtual void display_board() = 0;
     // Return true if game is over
     virtual bool game_is_over() = 0;
+    virtual int winner() = 0;
 };
 
 ///////////////////////////////////////////
@@ -40,6 +41,9 @@ public:
     bool is_winner();
     bool is_draw();
     bool game_is_over();
+    int winner(){
+        return 1;
+    }
 };
 
 ///////////////////////////////////////////
@@ -82,12 +86,12 @@ public:
 
 ///////////////////////////////////////////
 class GameManager {
-private:
+protected:
     Board* boardPtr;
     Player* players[2];
 public:
     GameManager(Board*, Player* playerPtr[2]);
-    void run();
+    virtual void run();
     // This method creates board and players
     // It displays board
     // While True
@@ -98,5 +102,22 @@ public:
     //      If draw, declare so and end
 
 };
+
+class Tic_Tac_Teo_Board:public Board{
+public:
+    int x = 0;
+    Tic_Tac_Teo_Board ();
+    bool update_board (int x, int y, char mark) override;
+    void display_board() override;
+    bool is_winner() override;
+    bool is_draw() override;
+    bool game_is_over() override;
+    int winner() override;
+};
+class Tic_Tac_Teo_GameManager:public GameManager{
+    void run() override;
+};
 void X_O_Runner();
+void Tic_Tac_Teo_Runner();
+
 #endif
