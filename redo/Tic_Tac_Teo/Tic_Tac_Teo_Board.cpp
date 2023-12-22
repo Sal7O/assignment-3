@@ -46,7 +46,7 @@ void Tic_Tac_Teo_Board::display_board()
 
 bool Tic_Tac_Teo_Board::is_winner()
 {
-    if (n_moves == 24){
+    if (n_moves != 24){
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 if (i < 3 && board[i][j] == board[i + 1][j] && board[i][j] == board[i + 2][j]) {
@@ -63,10 +63,10 @@ bool Tic_Tac_Teo_Board::is_winner()
                 }
             }
         }
-        return x != 0;
+        return false;
     }
     else{
-        return false;
+        return true;
     }
 
 }
